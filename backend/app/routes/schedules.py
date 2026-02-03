@@ -4,7 +4,7 @@ from app.db.session import SessionLocal
 from app.models.schedule import Schedule
 from app.schemas.schedule import ScheduleCreate
 
-router = APIRouter()
+router = APIRouter(prefix="/schedules", tags=["schedules"])
 
 def get_db():
     db = SessionLocal()

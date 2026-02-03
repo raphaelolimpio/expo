@@ -8,8 +8,8 @@ app = FastAPI(title="Event Map API")
 def startup():
     init_db()
 
-app.include_router(maps.router, prefix="/maps")
-app.include_router(layers.router, prefix="/layers")
-app.include_router(blocks.router, prefix="/blocks")
-app.include_router(exhibitors.router, prefix="/exhibitors")
-app.include_router(schedules.router, prefix="/schedules")
+app.include_router(maps.router)
+app.include_router(layers.router)
+app.include_router(blocks.router)
+app.include_router(exhibitors.router)
+app.include_router(schedules.router)

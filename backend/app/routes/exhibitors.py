@@ -4,7 +4,7 @@ from app.db.session import SessionLocal
 from app.models.exhibitor import Exhibitor
 from app.schemas.exhibitor import ExhibitorCreate
 
-router = APIRouter()
+router = APIRouter(prefix="/exhibitors", tags=["exhibitors"])
 
 def get_db():
     db = SessionLocal()
